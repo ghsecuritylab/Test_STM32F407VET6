@@ -1,5 +1,5 @@
-#ifndef LEDBOARD_H
-#define LEDBOARD_H
+#ifndef KEYBOARDTASK_H
+#define KEYBOARDTASK_H
 //------------------------------------------------------------------------------------
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
@@ -65,4 +65,4 @@ void StartKeyboardTask(void const * argument);
 //void SN74HC165_readLine(struct SN74HC165_line *line);
 //bool SN74HC165_state(struct SN74HC165_line *line, int id);
 //------------------------------------------------------------------------------------
-#endif // LEDBOARD_H
+#endif // KEYBOARDTASK_H

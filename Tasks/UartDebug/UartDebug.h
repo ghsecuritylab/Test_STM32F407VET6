@@ -1,5 +1,5 @@
-#ifndef BLINKLEDTASK_H
-#define BLINKLEDTASK_H
+#ifndef UARTDEBUGTASK_H
+#define UARTDEBUGTASK_H
 //------------------------------------------------------------------------------------
 #include <stdlib.h>
 #include <stdio.h>
@@ -32,4 +32,4 @@ void sendToLog(const char *buffer);
 
 
 //------------------------------------------------------------------------------------
-#endif // BLINKLEDTASK_H
+#endif // UARTDEBUGTASK_H

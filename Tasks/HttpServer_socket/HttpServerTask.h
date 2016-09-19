@@ -1,5 +1,5 @@
-#ifndef HTTPSERVER_SOCKETTASK_H
-#define HTTPSERVER_SOCKETTASK_H
+#ifndef HTTPSERVER_H
+#define HTTPSERVER_H
 //------------------------------------------------------------------------------------
 #include "FreeRTOS.h"
 #include "task.h"
@@ -19,4 +19,4 @@ void StartHttpServerTask(void const * argument);
 
 
 //------------------------------------------------------------------------------------
-#endif // HTTPSERVER_SOCKETTASK_H
+#endif // HTTPSERVER_H
