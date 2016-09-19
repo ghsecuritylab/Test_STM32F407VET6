@@ -158,7 +158,7 @@ Stm32Application {
     // "STDIN_USART=1",
     Group {
         name: "Syscalls"
-        prefix: "./Syscalls"
+        prefix: "./syscalls"
         files: [
             "/**",
             //"/newlib_stubs.c",

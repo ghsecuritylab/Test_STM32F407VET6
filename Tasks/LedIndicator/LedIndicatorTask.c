@@ -4,6 +4,7 @@
 //!
 void StartLedIndicatorTask(void const * argument)
 {    
+    (void) argument;
 //    GPIO_InitTypeDef GPIO_InitStruct;
 
 //    /*Configure GPIO pin : PA3 */

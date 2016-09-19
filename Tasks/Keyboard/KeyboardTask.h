@@ -49,7 +49,7 @@ void KEYB_CLK(bool bit)     { HAL_GPIO_WritePin(GPIOE, GPIO_PIN_8, (bit) ? GPIO_
 bool KEYB_QH(void)          { return (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_10) == GPIO_PIN_SET) ? true : false; }
 //------------------------------------------------------------------------------------
 
-volatile char msg [100];
+char msg [100];
 
 //------------------------------------------------------------------------------------
 union SN74HC165_device KeyboardStorage[KeyboardNumberOf74HC165];

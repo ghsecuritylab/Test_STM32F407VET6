@@ -16,13 +16,13 @@
 
 //char LogBuffer[LOG_BUFFER_SIZE];
 
-uint8_t transmitBuffer[LOG_BUFFER_SIZE];
+char transmitBuffer[LOG_BUFFER_SIZE];
 
 //------------------------------------------------------------------------------------
-typedef struct {
-        uint8_t usart;
-        uint8_t byte;
-} myMes;
+//typedef struct {
+//        uint8_t usart;
+//        uint8_t byte;
+//} myMes;
 //------------------------------------------------------------------------------------
 //!
 void StartUartDebugTask(void const * argument);

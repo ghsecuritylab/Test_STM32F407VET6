@@ -10,6 +10,7 @@
 //!
 void StartKeyboardTask(void const * argument)
 {    
+    (void) argument;
     //const char *testMessage="KeyboardTask";
 
     for(;;)

@@ -4,15 +4,16 @@
 //!
 void StartUartDebugTask(void const * argument)
 {
+    (void) argument;
+
     // turn off buffers, so IO occurs immediately
     setvbuf(stdin, NULL, _IONBF, 0);
     setvbuf(stdout, NULL, _IONBF, 0);
     setvbuf(stderr, NULL, _IONBF, 0);
 
-    const char *testMessage = \
-            "------------------\r\n"
-            "   Start debug\r\n"
-            "------------------\r\n";
+    const char *testMessage = "------------------\r\n"
+                              "   Start debug\r\n"
+                              "------------------\r\n";
 
     HAL_UART_Transmit_IT(&huart1, testMessage, sizeof (testMessage));
 
@@ -38,7 +39,7 @@ void sendToLog(const char *buffer)
 
     char tickCount[10];
 
-    utoa(xTaskGetTickCount(), (uint)tickCount, 10);
+    utoa(xTaskGetTickCount(), tickCount, 10);
     //utoa(HAL_GetTick(), (uint)tickCount, 10);
 
     strcat(transmitBuffer, tickCount);

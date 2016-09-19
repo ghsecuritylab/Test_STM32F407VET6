@@ -4,6 +4,7 @@
 //!
 void StartSdWorkerTask(void const * argument)
 {    
+    (void) argument;
     const char *testMessage="SdWorker";
 
     /*
