@@ -176,21 +176,21 @@ Stm32Application {
 
         prefix: "./CubeMX/Drivers/CMSIS"
         files: [
-//            "/Device/ST/STM32F4xx/Include/stm32f4xx.h",
-//            "/Device/ST/STM32F4xx/Include/stm32f407xx.h",
-//            "/Device/ST/STM32F4xx/Include/system_stm32f4xx.h",
-
+            "/Include/**",
+            "/Device/ST/STM32F4xx/Include/**",
+            //"/Device/ST/STM32F4xx/Include/stm32f4xx.h",
+            //"/Device/ST/STM32F4xx/Include/stm32f407xx.h",
+            //"/Device/ST/STM32F4xx/Include/system_stm32f4xx.h",
             "/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c",
             "/Device/ST/STM32F4xx/Source/Templates/gcc/startup_stm32f407xx.s",
-            /*
-            "/Include/arm_common_tables.h",
-            "/Include/arm_const_structs.h",
-            "/Include/arm_math.h",
-            "/Include/core_cm4.h",
-            "/Include/core_cmFunc.h",
-            "/Include/core_cmInstr.h",
-            "/Include/core_cmSimd.h",
-*/
+//            "/Include/arm_common_tables.h",
+//            "/Include/arm_const_structs.h",
+//            "/Include/arm_math.h",
+//            "/Include/core_cm4.h",
+//            "/Include/core_cmFunc.h",
+//            "/Include/core_cmInstr.h",
+//            "/Include/core_cmSimd.h",
+//
 //            "/Include/cmsis_armcc.h",
 //            "/Include/cmsis_gcc.h",
         ]
@@ -202,7 +202,7 @@ Stm32Application {
     }
 
     //==========================================================================================
-/*
+
     Group {
         name: "CMSIS_DSP_Lib"
 
@@ -216,7 +216,7 @@ Stm32Application {
             //"/CMSIS/RTOS/Template/cmsis_os.h",
         ]
     }
-*/
+
     //==========================================================================================
 
     Group {
@@ -224,8 +224,8 @@ Stm32Application {
         prefix: "./CubeMX/Drivers/STM32F4xx_HAL_Driver"
         files: [
             "/Inc/**",
-            "/Inc/Legacy/**",
             "/Src/**",
+//            "/Inc/Legacy/**",
 //            "/Src/",
 //            "/Src/",
 //            "/Src/",
@@ -524,8 +524,8 @@ Stm32Application {
         // Исключить файлы из группы
         excludeFiles: [
             "/Temp/**",
-            "/httpserver-socket.h",
-            "/httpserver-socket.c",
+//            "/httpserver-socket.h",
+//            "/httpserver-socket.c",
         ]
     }
 

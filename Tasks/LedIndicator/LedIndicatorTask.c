@@ -24,12 +24,11 @@ void StartLedIndicatorTask(void const * argument)
         //fprintf(stdout, "Это тест %d %f  fprintf(stdout, ", 10, 20.01);
 
         sendToLog(testMessage);
-
-//        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
-//        //HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, GPIO_PIN_RESET);
-//        vTaskDelay(200);
-
         osDelay(200);
+
+        //-----------------------------------------------------
+//        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_15);
+//        osDelay(200);
     }
 }
 //------------------------------------------------------------------------------------
