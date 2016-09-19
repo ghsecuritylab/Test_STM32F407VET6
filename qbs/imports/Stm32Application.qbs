@@ -255,6 +255,7 @@ Stm32Product {
 */
 
 
+    // Пока не работает. Для отладки через ST-LINK - не нужно
     Rule {
         inputs: "elf"
         Artifact {
