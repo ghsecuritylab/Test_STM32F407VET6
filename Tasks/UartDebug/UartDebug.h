@@ -1,7 +1,9 @@
 #ifndef UARTDEBUGTASK_H
 #define UARTDEBUGTASK_H
 //------------------------------------------------------------------------------------
+// Возможно прийдется закоментировать
 #include <stdlib.h>
+
 #include <stdio.h>
 #include <string.h>
 
@@ -10,6 +12,7 @@
 
 #include "usart.h"
 
+#include "int2str.h"
 //------------------------------------------------------------------------------------
 
 #define LOG_BUFFER_SIZE 400

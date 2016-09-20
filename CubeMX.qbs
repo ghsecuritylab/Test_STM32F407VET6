@@ -126,7 +126,7 @@ Stm32Application {
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/lwip/apps/",
         "./CubeMX/Middlewares/Third_Party/LwIP/src/apps/httpd/",
         //-----------------------------------------------------------------
-        "./Syscalls/",
+        "./syscalls/",
         //-----------------------------------------------------------------
         "./Tasks/",
         "./Tasks/FsData_custom/",
