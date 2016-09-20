@@ -157,7 +157,7 @@ Stm32Application {
     // "STDERR_USART=1",
     // "STDIN_USART=1",
     Group {
-        name: "Syscalls"
+        name: "syscalls"
         prefix: "./syscalls"
         files: [
             "/**",
@@ -329,7 +329,6 @@ Stm32Application {
     }
 
     //==========================================================================================
-    /*
     Group {
         name: "cJSON"
         prefix: "./ExtLib/cJSON"
@@ -343,9 +342,9 @@ Stm32Application {
             "/test.c",
         ]
     }
-    */
+
     //==========================================================================================
-    /*
+
     // https://bitbucket.org/zserge/jsmn/src
     Group {
         name: "jsmn"
@@ -360,7 +359,7 @@ Stm32Application {
             "/jsmn_test.c",
         ]
     }
-    */
+
     //==========================================================================================
     /*
     Group {
