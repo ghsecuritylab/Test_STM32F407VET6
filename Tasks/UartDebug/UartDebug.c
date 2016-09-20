@@ -36,12 +36,11 @@ void StartUartDebugTask(void const * argument)
 //!
 void sendToLog(const char *buffer)
 {
-
     char tickCount[20];
 
     // отсутствуют в линукс версии компилятора
-    itoa(xTaskGetTickCount(), tickCount, 10);
-    //utoa(HAL_GetTick(), (uint)tickCount, 10);
+    //itoa(xTaskGetTickCount(), tickCount, 10);
+    utoa_builtin_div(HAL_GetTick(), tickCount);
 
     strcat(transmitBuffer, tickCount);
     strcat(transmitBuffer, " : ");

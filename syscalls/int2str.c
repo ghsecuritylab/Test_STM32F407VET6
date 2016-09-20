@@ -18,4 +18,32 @@ char *itoa(int number, char *destination, int base)
   return destination;
 }
 //------------------------------------------------------------------------------------
-
+char * utoa_builtin_div(uint32_t value, char *buffer)
+{
+   buffer += 11;
+// 11 байт достаточно для десятичного представления 32-х байтного числа
+// и  завершающего нуля
+   *--buffer = 0;
+   do
+   {
+      *--buffer = value % 10 + '0';
+      value /= 10;
+   }
+   while (value != 0);
+   return buffer;
+}
+//------------------------------------------------------------------------------------
+char * utoa_fast_div(uint32_t value, char *buffer)
+{
+    buffer += 11;
+    *--buffer = 0;
+    do
+    {
+        struct divmod10_t res = divmodu10(value);
+        *--buffer = res.rem + '0';
+        value = res.quot;
+    }
+    while (value != 0);
+    return buffer;
+}
+//------------------------------------------------------------------------------------
