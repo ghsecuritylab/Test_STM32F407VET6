@@ -128,9 +128,10 @@ Stm32Application {
         //-----------------------------------------------------------------
         "./syscalls/",
         //-----------------------------------------------------------------
-        "./Tasks/",
-        "./Tasks/FsData_custom/",
-        "./Tasks/HttpServer_socket/",
+        "./Tasks",
+        "./Tasks/common",
+        "./Tasks/FsData_custom",
+        "./Tasks/HttpServer_socket",
         "./Tasks/Keyboard/",
         "./Tasks/LedIndicator/",
         "./Tasks/UartDebug/",
@@ -441,6 +442,18 @@ Stm32Application {
     }
     */
 
+    //==========================================================================================
+    Group {
+        name: "common"
+        prefix: "./Tasks/common"
+        files: [
+            "/**",
+        ]
+
+        // Исключить файлы из группы
+        excludeFiles: [
+        ]
+    }
     //==========================================================================================
     Group {
         name: "FsData_custom"
