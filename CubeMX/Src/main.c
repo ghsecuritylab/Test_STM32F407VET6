@@ -36,9 +36,9 @@
 #include "adc.h"
 #include "crc.h"
 #include "dma.h"
-#include "eth.h"
 #include "fatfs.h"
 #include "i2c.h"
+#include "lwip.h"
 #include "sdio.h"
 #include "tim.h"
 #include "usart.h"
@@ -95,7 +95,6 @@ int main(void)
   MX_CRC_Init();
   MX_USART2_UART_Init();
   MX_USART1_UART_Init();
-  MX_ETH_Init();
 
   /* USER CODE BEGIN 2 */
 
