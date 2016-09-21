@@ -74,7 +74,7 @@ void StartSdWorkerTask(void const * argument)
     {
         sendToLog(testMessage);
 
-        osDelay(100);
+        osDelay(200);
     }
 }
 //------------------------------------------------------------------------------------

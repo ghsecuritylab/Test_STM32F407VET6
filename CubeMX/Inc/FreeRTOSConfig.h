@@ -97,7 +97,7 @@
 /* USER CODE END 0 */       
 #endif
 
-#define configUSE_PREEMPTION                     0
+#define configUSE_PREEMPTION                     1
 #define configUSE_IDLE_HOOK                      0
 #define configUSE_TICK_HOOK                      0
 #define configCPU_CLOCK_HZ                       ( SystemCoreClock )
@@ -111,6 +111,8 @@
 #define configUSE_MUTEXES                        1
 #define configQUEUE_REGISTRY_SIZE                8
 #define configCHECK_FOR_STACK_OVERFLOW           2
+#define configUSE_APPLICATION_TASK_TAG           1
+#define configUSE_COUNTING_SEMAPHORES            1
 #define configGENERATE_RUN_TIME_STATS            1
 
 /* Co-routine definitions. */
@@ -128,7 +130,11 @@ to exclude the API function. */
 #define INCLUDE_vTaskDelay                  1
 #define INCLUDE_xTaskGetSchedulerState      1
 
+#define INCLUDE_xQueueGetMutexHolder        1
+#define INCLUDE_xSemaphoreGetMutexHolder    1
 #define INCLUDE_pcTaskGetTaskName           1
+#define INCLUDE_xTaskGetCurrentTaskHandle   1
+#define INCLUDE_eTaskGetState               1
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS

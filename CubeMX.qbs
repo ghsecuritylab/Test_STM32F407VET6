@@ -113,7 +113,7 @@ Stm32Application {
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/",
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/ipv4/",
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/ipv4/lwip/",
-        "./CubeMX/Middlewares/Third_Party/LwIP/src/include/lwip/",
+        "./CubeMX/Middlewares/Third_Party/LwIP/src/include/lwip/",                                         
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/netif/",
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/posix/",
         "./CubeMX/Middlewares/Third_Party/LwIP/src/include/posix/sys/",

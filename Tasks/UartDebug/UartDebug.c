@@ -15,7 +15,7 @@ void StartUartDebugTask(void const * argument)
                               "   Start debug\r\n"
                               "------------------\r\n";
 
-    HAL_UART_Transmit_IT(&huart1, testMessage, sizeof (testMessage));
+    HAL_UART_Transmit(&huart1, testMessage, sizeof (testMessage), 100);
 
     for(;;)
     {
@@ -39,8 +39,8 @@ void sendToLog(const char *buffer)
     char tickCount[20];
 
     // отсутствуют в линукс версии компилятора
-    //itoa(xTaskGetTickCount(), tickCount, 10);
-    utoa_builtin_div(HAL_GetTick(), tickCount);
+    itoa(xTaskGetTickCount(), tickCount, 10);
+    //utoa_builtin_div(HAL_GetTick(), tickCount);
 
     strcat(transmitBuffer, tickCount);
     strcat(transmitBuffer, " : ");

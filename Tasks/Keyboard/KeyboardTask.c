@@ -32,6 +32,7 @@ void StartKeyboardTask(void const * argument)
         sendToLog( msg );
 
         osDelay(200);
+        //taskYIELD();
     }
 }
 //------------------------------------------------------------------------------------
