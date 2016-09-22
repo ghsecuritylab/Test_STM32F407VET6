@@ -48,8 +48,8 @@ Stm32Product {
         continue
     */
 
-    cpp.toolchainPathPrefix: "C:/GCC/gcc-arm-none-eabi-5.3_2016q1/bin/"
-    //cpp.toolchainPathPrefix: "/usr/bin/"
+    //cpp.toolchainPathPrefix: "C:/GCC/gcc-arm-none-eabi-5.3_2016q1/bin/"
+    cpp.toolchainPathPrefix: "/usr/bin/"
 
     /*
         — использовать короткие пути для проекта
