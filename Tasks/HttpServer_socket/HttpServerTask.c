@@ -16,7 +16,7 @@ void StartHttpServerTask(void const * argument)
 
     const char *testMessage="HttpServer";
 
-    //http_server_socket_init();
+    http_server_socket_init();
 
     for(;;)
     {
