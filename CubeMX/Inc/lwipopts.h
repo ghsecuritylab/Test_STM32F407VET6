@@ -162,11 +162,11 @@
 /*----- Default Value for HTTPD_SERVER_AGENT: ---*/
 #define HTTPD_SERVER_AGENT "http://savannah.nongnu.org/projects/lwip"
 /*----- Default Value for LWIP_HTTPD_DYNAMIC_HEADERS: ---*/
-#define LWIP_HTTPD_DYNAMIC_HEADERS 0
+#define LWIP_HTTPD_DYNAMIC_HEADERS 1
 /*----- Default Value for HTTPD_DEBUG: ---*/
 #define HTTPD_DEBUG LWIP_DBG_ON
 /*----- Default Value for HTTPD_USE_MEM_POOL: ---*/
-#define HTTPD_USE_MEM_POOL 0
+#define HTTPD_USE_MEM_POOL 1
 /*----- Default Value for HTTPD_SERVER_PORT: ---*/
 #define HTTPD_SERVER_PORT 80
 /*----- Default Value for HTTPD_MAX_RETRIES: ---*/
@@ -200,9 +200,9 @@
 /*----- Default Value for LWIP_HTTPD_SSI_INCLUDE_TAG: ---*/
 #define LWIP_HTTPD_SSI_INCLUDE_TAG 1
 /*----- Default Value for LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR: ---*/
-#define LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR 0
+#define LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR 1
 /*----- Default Value for LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED: ---*/
-#define LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED 0
+#define LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED 1
 /*----- Default Value for HTTPD_LIMIT_SENDING_TO_2MSS: ---*/
 #define HTTPD_LIMIT_SENDING_TO_2MSS 1
 /*----- Default Value for LWIP_HTTPD_CUSTOM_FILES: ---*/
@@ -210,7 +210,7 @@
 /*----- Default Value for LWIP_HTTPD_DYNAMIC_FILE_READ: ---*/
 #define LWIP_HTTPD_DYNAMIC_FILE_READ 1
 /*----- Default Value for LWIP_HTTPD_FILE_STATE: ---*/
-#define LWIP_HTTPD_FILE_STATE 0
+#define LWIP_HTTPD_FILE_STATE 1
 /*----- Default Value for LWIP_HTTPD_FS_ASYNC_READ: ---*/
 #define LWIP_HTTPD_FS_ASYNC_READ 1
 /*----- Default Value for HTTPD_USE_CUSTOM_FSDATA: ---*/
