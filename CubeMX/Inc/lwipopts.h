@@ -75,7 +75,7 @@
 #define MEMP_MEM_MALLOC 1
 /*----- Value in opt.h for MEM_ALIGNMENT: 1 -----*/
 #define MEM_ALIGNMENT 4
-/*----- Default Value for MEMP_NUM_SYS_TIMEOUT: 4 ---*/
+/*----- Value in opt.h for MEMP_NUM_SYS_TIMEOUT: (LWIP_TCP + IP_REASSEMBLY + LWIP_ARP + (2*LWIP_DHCP) + LWIP_AUTOIP + LWIP_IGMP + LWIP_DNS + (PPP_SUPPORT*6*MEMP_NUM_PPP_PCB) + (LWIP_IPV6 ? (1 + LWIP_IPV6_REASS + LWIP_IPV6_MLD) : 0)) -*/
 #define MEMP_NUM_SYS_TIMEOUT 5
 /*----- Default Value for ETHARP_TRUST_IP_MAC: 0 ---*/
 #define ETHARP_TRUST_IP_MAC 1
@@ -97,8 +97,6 @@
 #define LWIP_UDPLITE 1
 /*----- Default Value for LWIP_NETBUF_RECVINFO: 0 ---*/
 #define LWIP_NETBUF_RECVINFO 1
-/*----- Default Value for TCP_QUEUE_OOSEQ: 0 ---*/
-#define TCP_QUEUE_OOSEQ 1
 /*----- Value in opt.h for TCP_SND_QUEUELEN: (4*TCP_SND_BUF + (TCP_MSS - 1))/TCP_MSS -----*/
 #define TCP_SND_QUEUELEN 9
 /*----- Value in opt.h for TCP_SNDLOWAT: LWIP_MIN(LWIP_MAX(((TCP_SND_BUF)/2), (2 * TCP_MSS) + 1), (TCP_SND_BUF) - 1) -*/
@@ -109,8 +107,6 @@
 #define LWIP_TCP_TIMESTAMPS 1
 /*----- Value in opt.h for TCP_WND_UPDATE_THRESHOLD: LWIP_MIN(TCP_WND/4, TCP_MSS*4) -----*/
 #define TCP_WND_UPDATE_THRESHOLD 536
-/*----- Default Value for LWIP_CALLBACK_API: 0 ---*/
-#define LWIP_CALLBACK_API 1
 /*----- Default Value for LWIP_NETIF_HOSTNAME: 0 ---*/
 #define LWIP_NETIF_HOSTNAME 1
 /*----- Default Value for LWIP_NETIF_API: 0 ---*/
@@ -143,78 +139,36 @@
 #define LWIP_SO_RCVBUF 1
 /*----- Default Value for LWIP_HTTPD: 0 ---*/
 #define LWIP_HTTPD 1
-/*----- Default Value for LWIP_HTTPD_CGI: ---*/
+/*----- Default Value for LWIP_HTTPD_CGI: 0 ---*/
 #define LWIP_HTTPD_CGI 1
-/*----- Default Value for LWIP_HTTPD_SSI: ---*/
+/*----- Default Value for LWIP_HTTPD_SSI: 0 ---*/
 #define LWIP_HTTPD_SSI 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_POST: ---*/
+/*----- Default Value for LWIP_HTTPD_SUPPORT_POST: 0 ---*/
 #define LWIP_HTTPD_SUPPORT_POST 1
-/*----- Default Value for LWIP_HTTPD_MAX_CGI_PARAMETERS: ---*/
-#define LWIP_HTTPD_MAX_CGI_PARAMETERS 16
-/*----- Default Value for LWIP_HTTPD_SSI_MULTIPART: ---*/
+/*----- Default Value for LWIP_HTTPD_SSI_MULTIPART: 0 ---*/
 #define LWIP_HTTPD_SSI_MULTIPART 1
-/*----- Default Value for LWIP_HTTPD_MAX_TAG_NAME_LEN: ---*/
-#define LWIP_HTTPD_MAX_TAG_NAME_LEN 8
-/*----- Default Value for LWIP_HTTPD_MAX_TAG_INSERT_LEN: ---*/
-#define LWIP_HTTPD_MAX_TAG_INSERT_LEN 192
-/*----- Default Value for LWIP_HTTPD_POST_MANUAL_WND: ---*/
-#define LWIP_HTTPD_POST_MANUAL_WND 0
-/*----- Default Value for HTTPD_SERVER_AGENT: ---*/
-#define HTTPD_SERVER_AGENT "http://savannah.nongnu.org/projects/lwip"
-/*----- Default Value for LWIP_HTTPD_DYNAMIC_HEADERS: ---*/
+/*----- Default Value for LWIP_HTTPD_DYNAMIC_HEADERS: 0 ---*/
 #define LWIP_HTTPD_DYNAMIC_HEADERS 1
-/*----- Default Value for HTTPD_DEBUG: ---*/
+/*----- Default Value for HTTPD_DEBUG: LWIP_DBG_OFF ---*/
 #define HTTPD_DEBUG LWIP_DBG_ON
-/*----- Default Value for HTTPD_USE_MEM_POOL: ---*/
+/*----- Default Value for HTTPD_USE_MEM_POOL: 0 ---*/
 #define HTTPD_USE_MEM_POOL 1
-/*----- Default Value for HTTPD_SERVER_PORT: ---*/
-#define HTTPD_SERVER_PORT 80
-/*----- Default Value for HTTPD_MAX_RETRIES: ---*/
-#define HTTPD_MAX_RETRIES 4
-/*----- Default Value for HTTPD_POLL_INTERVAL: ---*/
-#define HTTPD_POLL_INTERVAL 4
-/*----- Default Value for HTTPD_TCP_PRIO: ---*/
-#define HTTPD_TCP_PRIO 1
-/*----- Default Value for LWIP_HTTPD_TIMING: ---*/
-#define LWIP_HTTPD_TIMING 0
-/*----- Default Value for HTTPD_DEBUG_TIMING: ---*/
-#define HTTPD_DEBUG_TIMING LWIP_DBG_OFF
-/*----- Default Value for LWIP_HTTPD_STRNSTR_PRIVATE: ---*/
-#define LWIP_HTTPD_STRNSTR_PRIVATE 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_EXTSTATUS: ---*/
+/*----- Default Value for LWIP_HTTPD_SUPPORT_EXTSTATUS: 0 ---*/
 #define LWIP_HTTPD_SUPPORT_EXTSTATUS 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_V09: ---*/
-#define LWIP_HTTPD_SUPPORT_V09 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_11_KEEPALIVE: ---*/
-#define LWIP_HTTPD_SUPPORT_11_KEEPALIVE 0
-/*----- Default Value for LWIP_HTTPD_SUPPORT_REQUESTLIST: ---*/
-#define LWIP_HTTPD_SUPPORT_REQUESTLIST 1
-/*----- Default Value for LWIP_HTTPD_REQ_QUEUELEN: ---*/
-#define LWIP_HTTPD_REQ_QUEUELEN 5
-/*----- Default Value for LWIP_HTTPD_REQ_BUFSIZE: ---*/
-#define LWIP_HTTPD_REQ_BUFSIZE 1023
-/*----- Default Value for LWIP_HTTPD_MAX_REQ_LENGTH: ---*/
-#define LWIP_HTTPD_MAX_REQ_LENGTH 1023
-/*----- Default Value for LWIP_HTTPD_POST_MAX_RESPONSE_URI_LEN: ---*/
-#define LWIP_HTTPD_POST_MAX_RESPONSE_URI_LEN 63
-/*----- Default Value for LWIP_HTTPD_SSI_INCLUDE_TAG: ---*/
-#define LWIP_HTTPD_SSI_INCLUDE_TAG 1
-/*----- Default Value for LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR: ---*/
+/*----- Default Value for LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR: 0 ---*/
 #define LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR 1
-/*----- Default Value for LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED: ---*/
+/*----- Default Value for LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED: 0 ---*/
 #define LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED 1
-/*----- Default Value for HTTPD_LIMIT_SENDING_TO_2MSS: ---*/
-#define HTTPD_LIMIT_SENDING_TO_2MSS 1
-/*----- Default Value for LWIP_HTTPD_CUSTOM_FILES: ---*/
-#define LWIP_HTTPD_CUSTOM_FILES 0
-/*----- Default Value for LWIP_HTTPD_DYNAMIC_FILE_READ: ---*/
+/*----- Default Value for LWIP_HTTPD_CUSTOM_FILES: 0 ---*/
+#define LWIP_HTTPD_CUSTOM_FILES 1
+/*----- Default Value for LWIP_HTTPD_DYNAMIC_FILE_READ: 0 ---*/
 #define LWIP_HTTPD_DYNAMIC_FILE_READ 1
-/*----- Default Value for LWIP_HTTPD_FILE_STATE: ---*/
-#define LWIP_HTTPD_FILE_STATE 1
-/*----- Default Value for LWIP_HTTPD_FS_ASYNC_READ: ---*/
+/*----- Default Value for HTTPD_PRECALCULATED_CHECKSUM: 0 ---*/
+#define HTTPD_PRECALCULATED_CHECKSUM 1
+/*----- Default Value for LWIP_HTTPD_FS_ASYNC_READ: 0 ---*/
 #define LWIP_HTTPD_FS_ASYNC_READ 1
-/*----- Default Value for HTTPD_USE_CUSTOM_FSDATA: ---*/
-#define HTTPD_USE_CUSTOM_FSDATA 0
+/*----- Default Value for HTTPD_USE_CUSTOM_FSDATA: 0 ---*/
+#define HTTPD_USE_CUSTOM_FSDATA 1
 /*----- Value in opt.h for LWIP_STATS: 1 -----*/
 #define LWIP_STATS 0
 /*----- Value in opt.h for CHECKSUM_GEN_IP: 1 -----*/

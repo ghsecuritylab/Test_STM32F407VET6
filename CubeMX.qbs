@@ -464,7 +464,7 @@ Stm32Application {
 
         // Исключить файлы из группы
         excludeFiles: [
-            "/fsdata_custom.c",
+            //"/fsdata_custom.c",
         ]
     }
 
