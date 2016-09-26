@@ -53,6 +53,10 @@ Stm32Application {
         //"FS_ROOT=адрес памяти   const struct fsdata_file *f; "
     ]
 
+    // MAX_PRIORITIES = 16                        (Для STM32F4) поддержка приоритетов
+    // LIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY = 6 (Для STM32F4) наибольший аппаратный приоритет
+    //
+
     cpp.includePaths: [
         //-----------------------------------------------------------------
         "./CubeMX/Inc/",
@@ -326,6 +330,7 @@ Stm32Application {
             "/src/apps/httpd/fsdata.c",
             //-------------------------------------
             //"/src/apps/httpd/fs.c",
+            "/src/apps/**",
         ]
     }
 
@@ -455,6 +460,7 @@ Stm32Application {
         ]
     }
     //==========================================================================================
+    /*
     Group {
         name: "FsData_custom"
         prefix: "./Tasks/FsData_custom"
@@ -467,7 +473,7 @@ Stm32Application {
             //"/fsdata_custom.c",
         ]
     }
-
+*/
     //==========================================================================================
 
     Group {
@@ -536,8 +542,8 @@ Stm32Application {
         // Исключить файлы из группы
         excludeFiles: [
             "/Temp/**",
-//            "/httpserver-socket.h",
-//            "/httpserver-socket.c",
+            "/httpserver-socket.h",
+            "/httpserver-socket.c",
         ]
     }
 

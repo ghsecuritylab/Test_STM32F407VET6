@@ -53,7 +53,6 @@ void UsageFault_Handler(void);
 void DebugMon_Handler(void);
 void SysTick_Handler(void);
 void ETH_IRQHandler(void);
-void ETH_WKUP_IRQHandler(void);
 
 #ifdef __cplusplus
 }

@@ -56,45 +56,24 @@
 /* Parameters set in STM32CubeMX LwIP Configuration GUI -*/
 /*----- WITH_RTOS enabled (Since FREERTOS is set) -----*/
 #define WITH_RTOS 1
-/*----- CHECKSUM_BY_HARDWARE enabled -----*/
-#define CHECKSUM_BY_HARDWARE 1
+/*----- CHECKSUM_BY_HARDWARE disabled -----*/
+#define CHECKSUM_BY_HARDWARE 0
 /*-----------------------------------------------------------------------------*/
-
-/* LWIP_SO_RCVBUF is enabled => this requires INT_MAX definition in limits.h --*/
-#include "limits.h"
 
 /* LwIP Stack Parameters (modified compared to initialization value in opt.h) -*/
 /* Parameters set in STM32CubeMX LwIP Configuration GUI -*/
 /*----- Value in opt.h for LWIP_DHCP: 0 -----*/
 #define LWIP_DHCP 1
-/*----- Default Value for SYS_LIGHTWEIGHT_PROT: 0 ---*/
-#define SYS_LIGHTWEIGHT_PROT 1
-/*----- Default Value for MEM_LIBC_MALLOC: 0 ---*/
-#define MEM_LIBC_MALLOC 1
-/*----- Default Value for MEMP_MEM_MALLOC: 0 ---*/
-#define MEMP_MEM_MALLOC 1
 /*----- Value in opt.h for MEM_ALIGNMENT: 1 -----*/
 #define MEM_ALIGNMENT 4
 /*----- Value in opt.h for MEMP_NUM_SYS_TIMEOUT: (LWIP_TCP + IP_REASSEMBLY + LWIP_ARP + (2*LWIP_DHCP) + LWIP_AUTOIP + LWIP_IGMP + LWIP_DNS + (PPP_SUPPORT*6*MEMP_NUM_PPP_PCB) + (LWIP_IPV6 ? (1 + LWIP_IPV6_REASS + LWIP_IPV6_MLD) : 0)) -*/
 #define MEMP_NUM_SYS_TIMEOUT 5
-/*----- Default Value for ETHARP_TRUST_IP_MAC: 0 ---*/
-#define ETHARP_TRUST_IP_MAC 1
-/*----- Default Value for ETHARP_SUPPORT_VLAN: 0 ---*/
-#define ETHARP_SUPPORT_VLAN 1
 /*----- Value in opt.h for LWIP_ETHERNET: LWIP_ARP || PPPOE_SUPPORT -*/
 #define LWIP_ETHERNET 1
-/*----- Default Value for ETHARP_SUPPORT_STATIC_ENTRIES: 0 ---*/
-#define ETHARP_SUPPORT_STATIC_ENTRIES 1
-/*----- Default Value for ETHARP_TABLE_MATCH_NETIF: 0 ---*/
-#define ETHARP_TABLE_MATCH_NETIF 1
-/*----- Default Value for LWIP_DHCP_CHECK_LINK_UP: 0 ---*/
-#define LWIP_DHCP_CHECK_LINK_UP 1
 /*----- Default Value for DNS_DOES_NAME_CHECK: 1 ---*/
 #define DNS_DOES_NAME_CHECK 0
 /*----- Value in opt.h for LWIP_DNS_SECURE: (LWIP_DNS_SECURE_RAND_XID | LWIP_DNS_SECURE_NO_MULTIPLE_OUTSTANDING | LWIP_DNS_SECURE_RAND_SRC_PORT) -*/
 #define LWIP_DNS_SECURE 7
-/*----- Default Value for LWIP_UDPLITE: 0 ---*/
-#define LWIP_UDPLITE 1
 /*----- Default Value for LWIP_NETBUF_RECVINFO: 0 ---*/
 #define LWIP_NETBUF_RECVINFO 1
 /*----- Value in opt.h for TCP_SND_QUEUELEN: (4*TCP_SND_BUF + (TCP_MSS - 1))/TCP_MSS -----*/
@@ -107,24 +86,10 @@
 #define LWIP_TCP_TIMESTAMPS 1
 /*----- Value in opt.h for TCP_WND_UPDATE_THRESHOLD: LWIP_MIN(TCP_WND/4, TCP_MSS*4) -----*/
 #define TCP_WND_UPDATE_THRESHOLD 536
-/*----- Default Value for LWIP_NETIF_HOSTNAME: 0 ---*/
-#define LWIP_NETIF_HOSTNAME 1
-/*----- Default Value for LWIP_NETIF_API: 0 ---*/
-#define LWIP_NETIF_API 1
-/*----- Default Value for LWIP_NETIF_STATUS_CALLBACK: 0 ---*/
-#define LWIP_NETIF_STATUS_CALLBACK 1
-/*----- Default Value for LWIP_NETIF_LINK_CALLBACK: 0 ---*/
-#define LWIP_NETIF_LINK_CALLBACK 1
-/*----- Default Value for LWIP_NETIF_REMOVE_CALLBACK: 0 ---*/
-#define LWIP_NETIF_REMOVE_CALLBACK 1
-/*----- Default Value for LWIP_NETIF_HWADDRHINT: 0 ---*/
-#define LWIP_NETIF_HWADDRHINT 1
-/*----- Default Value for LWIP_NETIF_LOOPBACK: 0 ---*/
-#define LWIP_NETIF_LOOPBACK 1
 /*----- Value in opt.h for TCPIP_THREAD_STACKSIZE: 0 -----*/
 #define TCPIP_THREAD_STACKSIZE 1024
 /*----- Value in opt.h for TCPIP_THREAD_PRIO: 1 -----*/
-#define TCPIP_THREAD_PRIO 3
+#define TCPIP_THREAD_PRIO 7
 /*----- Value in opt.h for SLIPIF_THREAD_STACKSIZE: 0 -----*/
 #define SLIPIF_THREAD_STACKSIZE 1024
 /*----- Value in opt.h for SLIPIF_THREAD_PRIO: 1 -----*/
@@ -132,43 +97,7 @@
 /*----- Value in opt.h for DEFAULT_THREAD_STACKSIZE: 0 -----*/
 #define DEFAULT_THREAD_STACKSIZE 1024
 /*----- Value in opt.h for DEFAULT_THREAD_PRIO: 1 -----*/
-#define DEFAULT_THREAD_PRIO 3
-/*----- Default Value for LWIP_NETCONN_SEM_PER_THREAD: 0 ---*/
-#define LWIP_NETCONN_SEM_PER_THREAD 1
-/*----- Default Value for LWIP_SO_RCVBUF: 0 ---*/
-#define LWIP_SO_RCVBUF 1
-/*----- Default Value for LWIP_HTTPD: 0 ---*/
-#define LWIP_HTTPD 1
-/*----- Default Value for LWIP_HTTPD_CGI: 0 ---*/
-#define LWIP_HTTPD_CGI 1
-/*----- Default Value for LWIP_HTTPD_SSI: 0 ---*/
-#define LWIP_HTTPD_SSI 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_POST: 0 ---*/
-#define LWIP_HTTPD_SUPPORT_POST 1
-/*----- Default Value for LWIP_HTTPD_SSI_MULTIPART: 0 ---*/
-#define LWIP_HTTPD_SSI_MULTIPART 1
-/*----- Default Value for LWIP_HTTPD_DYNAMIC_HEADERS: 0 ---*/
-#define LWIP_HTTPD_DYNAMIC_HEADERS 1
-/*----- Default Value for HTTPD_DEBUG: LWIP_DBG_OFF ---*/
-#define HTTPD_DEBUG LWIP_DBG_ON
-/*----- Default Value for HTTPD_USE_MEM_POOL: 0 ---*/
-#define HTTPD_USE_MEM_POOL 1
-/*----- Default Value for LWIP_HTTPD_SUPPORT_EXTSTATUS: 0 ---*/
-#define LWIP_HTTPD_SUPPORT_EXTSTATUS 1
-/*----- Default Value for LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR: 0 ---*/
-#define LWIP_HTTPD_ABORT_ON_CLOSE_MEM_ERROR 1
-/*----- Default Value for LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED: 0 ---*/
-#define LWIP_HTTPD_KILL_OLD_ON_CONNECTIONS_EXCEEDED 1
-/*----- Default Value for LWIP_HTTPD_CUSTOM_FILES: 0 ---*/
-#define LWIP_HTTPD_CUSTOM_FILES 1
-/*----- Default Value for LWIP_HTTPD_DYNAMIC_FILE_READ: 0 ---*/
-#define LWIP_HTTPD_DYNAMIC_FILE_READ 1
-/*----- Default Value for HTTPD_PRECALCULATED_CHECKSUM: 0 ---*/
-#define HTTPD_PRECALCULATED_CHECKSUM 1
-/*----- Default Value for LWIP_HTTPD_FS_ASYNC_READ: 0 ---*/
-#define LWIP_HTTPD_FS_ASYNC_READ 1
-/*----- Default Value for HTTPD_USE_CUSTOM_FSDATA: 0 ---*/
-#define HTTPD_USE_CUSTOM_FSDATA 1
+#define DEFAULT_THREAD_PRIO 7
 /*----- Value in opt.h for LWIP_STATS: 1 -----*/
 #define LWIP_STATS 0
 /*----- Value in opt.h for CHECKSUM_GEN_IP: 1 -----*/
