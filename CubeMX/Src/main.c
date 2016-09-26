@@ -34,7 +34,6 @@
 #include "stm32f4xx_hal.h"
 #include "cmsis_os.h"
 #include "adc.h"
-#include "crc.h"
 #include "fatfs.h"
 #include "i2c.h"
 #include "lwip.h"
@@ -90,7 +89,6 @@ int main(void)
   MX_SDIO_SD_Init();
   MX_TIM6_Init();
   MX_USART3_UART_Init();
-  MX_CRC_Init();
   MX_USART2_UART_Init();
   MX_USART1_UART_Init();
 
