@@ -315,7 +315,15 @@ Stm32Application {
     }
 
     //==========================================================================================
-
+    // Для нормальной работы прочитать http://forum.easyelectronics.ru/viewtopic.php?f=49&t=23853&start=0
+    // В файле /Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c  (FreeRTOS 8.2.3 по крайней мере)
+    // строку [736] configASSERT( ucCurrentPriority >= ucMaxSysCallPriority ); // нужно закоментарить!!!
+    // или заменить на
+    // if( ulCurrentInterrupt >= portFIRST_USER_INTERRUPT_NUMBER ) ассерт configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
+    //
+    // extern const struct fsdata_file file__img_sics_gif[];
+    // extern const struct fsdata_file file__404_html[];
+    // extern const struct fsdata_file file__index_html[];
     Group {
         name: "LwIP"
         prefix: "./CubeMX/Middlewares/Third_Party/LwIP"
@@ -327,10 +335,13 @@ Stm32Application {
         excludeFiles: [
             // fsdata_custom.c
             // не подключать, чтоб не было переопределения
-            "/src/apps/httpd/fsdata.c",
+            //"/src/apps/httpd/fsdata.c",
             //-------------------------------------
             //"/src/apps/httpd/fs.c",
-            "/src/apps/**",
+            //"/src/apps/httpd/fsdata.c",
+            //"/src/apps/httpd/fsdata_custom.c",
+            //"/src/apps/**",
+            "/src/apps/httpd/**",
         ]
     }
 
@@ -460,7 +471,7 @@ Stm32Application {
         ]
     }
     //==========================================================================================
-    /*
+/*
     Group {
         name: "FsData_custom"
         prefix: "./Tasks/FsData_custom"
@@ -542,8 +553,10 @@ Stm32Application {
         // Исключить файлы из группы
         excludeFiles: [
             "/Temp/**",
-            "/httpserver-socket.h",
-            "/httpserver-socket.c",
+            "/fs/**",
+            "/httpd/**",
+//            "/httpserver-socket.h",
+//            "/httpserver-socket.c",
         ]
     }
 

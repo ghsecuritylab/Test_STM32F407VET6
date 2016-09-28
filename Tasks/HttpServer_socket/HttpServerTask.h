@@ -6,7 +6,7 @@
 #include "cmsis_os.h"
 
 #include "UartDebug.h"
-//#include "httpserver-socket.h"
+#include "httpserver-socket.h"
 //------------------------------------------------------------------------------------
 //!
 //extern void MX_LWIP_Init(void);

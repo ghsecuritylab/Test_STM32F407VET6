@@ -40,6 +40,7 @@
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/
+#define configUSE_STATS_FORMATTING_FUNCTIONS 1
 
 /* USER CODE BEGIN Private defines */
 
